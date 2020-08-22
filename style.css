@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Do Hyeon', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://wallpapercave.com/wp/fRYYDpF.jpg);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    padding: 0 15px;
+}
+.card{
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(120deg, #e7ac89 50%, #625dad 50%);
+    border-radius: 5px;
+    border: 10px solid #190025;
+}
+.card h1{
+    padding: 15px;
+    color: #eaeaea;
+    font-size: 3.5em;
+    text-shadow: 3px 3px 3px #190025;
+    position: absolute;
+    top: 10%;
+}
+#audioImg{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: url(images/vinyl.png);
+    background-size: cover;
+    transform: rotate(30deg);
+    animation: rotatedisk 0s infinite linear;
+    position: absolute;
+    top: 40%;
+}
+@keyframes rotatedisk{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.card #songTitle{
+    width: 100%;
+    color: #eaeaea;
+    font-weight: 600;
+    padding: 5px 20px;
+    font-family: sans-serif;
+    text-align: center;
+    background: #1900254d;
+    position: absolute;
+    top: 0;
+}
+.card .control{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+    background: #190025;
+    position: absolute;
+    bottom: 0;
+}
+.card .control button{
+    width: 50px;
+    height: 100%;
+    background: none;
+    color: #eaeaea;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+.card .control button i{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .control button:hover{
+    color: #e7ac89;
+}
+
+.card .control .custom-track{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .control .custom-track .audioTrack{
+    width: 100%;
+    height: 10px;
+    background: #eaeaea;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.card .control .custom-track .audioTrack #track{
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    background: #e7ac89;
+}
+.card .control .custom-track audio{
+    width: 490px;
+}
+.card .control .my-volume{
+    width: 150px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-file-label small{
+    color: #190025;
+    font-family: sans-serif;
+    
+}
+.btn{
+    background: #e7ac89;
+    border: 1px solid #e7ac89;
+    color: #eaeaea;
+}
+.btn:hover{
+    background: #625dad;
+    border: 1px solid #625dad;
+    color: #eaeaea;
+}
+
+#showList{
+    color: #190025;
+}

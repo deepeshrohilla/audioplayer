@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <!-- google icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="col-lg-6 p-2 rounded">
+        <div class="card">
+            <small id="songTitle">Empty Audio</small>
+            <h1>Audio Player</h1>
+            <!-- Audio image -->
+            <span id="audioImg"></span>
+            <!-- Audio title -->
+            <!-- Audio controls -->
+            <div class="control">
+                <button onclick="prev()" title="Previous"><i class="material-icons">chevron_left</i></button>
+                <button onclick="play()" id="play_arrow" title="Play"><i class="material-icons">play_arrow</i></button>
+                <button onclick="pause()" id="pause" title="Pause"><i class="material-icons">pause</i></button>
+                <button onclick="next()" title="Next"><i class="material-icons">chevron_right</i></button>
+                <!-- Audio track -->
+                <div class="custom-track">
+                    <div class="audioTrack mx-2">
+                        <div id="track"></div>
+                        <audio id="audio"></audio>
+                    </div>
+                </div>
+                <div class="my-volume">
+                    <i class="material-icons text-light">volume_up</i>
+                    <input type="range" class="custom-range" id="volume" value="100">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 row p-0">
+        <!-- Choose audio files only -->
+        <div class="col-lg-6 rounded p-2">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="addFile" accept="audio/mp3" multiple />
+                <label class="custom-file-label" for="customFile"><small>Only .mp3 files are supported!</small></label>
+            </div>
+        </div>
+
+        <!-- Audio playlist modal -->
+        <div class="col-lg-6 rounded p-2">
+            <button type="button" class="btn col-lg-12" data-toggle="modal"
+                data-target="#exampleModal">Playlist</button>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Playlist</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-dialog modal-dialog-scrollable p-0 m-3">
+                        <div id="showList"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <!-- popper js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- my script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
