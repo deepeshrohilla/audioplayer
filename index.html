@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>Audio</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <!-- google icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- bootstrap css -->
@@ -44,9 +45,9 @@
             </div>
         </div>
     </div>
-    <div class="col-lg-6 row p-0">
+    <div class="col-lg-6 row d-lg-flex justify-content-center p-0">
         <!-- Choose audio files only -->
-        <div class="col-lg-6 rounded p-2">
+        <div class="col-lg-6 rounded p-2 d-lg-block d-sm-none d-md-none d-none">
             <div class="custom-file">
                 <input type="file" class="custom-file-input" id="addFile" accept="audio/mp3" multiple />
                 <label class="custom-file-label" for="customFile"><small>Only .mp3 files are supported!</small></label>
@@ -54,11 +55,11 @@
         </div>
 
         <!-- Audio playlist modal -->
-        <div class="col-lg-6 rounded p-2">
+        <div class="col-lg-6 rounded p-2 d-lg-block d-sm-none d-md-none d-none">
             <button type="button" class="btn col-lg-12" data-toggle="modal"
-                data-target="#exampleModal">Playlist</button>
+                data-target="#exampleModal1">Play Your Playlist</button>
         </div>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -70,16 +71,43 @@
                     <div class="modal-dialog modal-dialog-scrollable p-0 m-3">
                         <div id="showList"></div>
                     </div>
+                    <div class="modal-footer">
+                        <button class="btn" id="clearPlaylist">clear playlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Play default playlist -->
+        <div class="col-lg-6 rounded p-2">
+            <button type="button" class="btn col-lg-12" id="dfPlaylistBtn" data-toggle="modal" data-target="#exampleModal2">Play Default
+                Playlist</button>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Default Playlist</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-dialog modal-dialog-scrollable p-0 m-3">
+                        <div id="showList2">
+                            <h6>1 Alan Walker - Fade [NCS Release].mp3</h6>
+                            <h6>2 Alan Walker, Sabrina Carpenter & Farruko - On My Way.mp3</h6>
+                            <h6>3 Dharia - (Uu Nai Na) Sugar And Brownies.mp3</h6>
+                            <h6>4 Faded - Alan Walker.mp3</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
+
     <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- popper js -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
