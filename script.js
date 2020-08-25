@@ -79,3 +79,10 @@ audio.addEventListener('timeupdate', () => {
     track.style.width = position * 100 + "%"
     console.log(position * 100 + "\n" + audio.currentTime + " current time\n" + audio.duration + " duration")
 })
+
+// clear playlist
+document.getElementById("clearPlaylist").onclick = ()=>{
+    files = null
+    document.getElementById("showList").innerHTML = null
+    songTitle.innerText = "Empty Audio"
+}
