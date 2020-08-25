@@ -10,7 +10,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(https://wallpapercave.com/wp/fRYYDpF.jpg);
+    background: url(images/back.jpg);
     background-attachment: fixed;
     background-size: 100% 100%;
     padding: 0 15px;
@@ -26,6 +26,11 @@ body{
     border-radius: 5px;
     border: 10px solid #190025;
 }
+@media screen and (max-width:600px){
+    .card{
+        min-height: 300px;
+    }
+}
 .card h1{
     padding: 15px;
     color: #eaeaea;
@@ -33,6 +38,11 @@ body{
     text-shadow: 3px 3px 3px #190025;
     position: absolute;
     top: 10%;
+}
+@media screen and (max-width:600px){
+    .card h1{
+        font-size: 3em;
+    }
 }
 #audioImg{
     width: 100px;
@@ -136,7 +146,8 @@ body{
 .btn{
     background: #e7ac89;
     border: 1px solid #e7ac89;
-    color: #eaeaea;
+    color: #190025;
+    letter-spacing: 2px;
 }
 .btn:hover{
     background: #625dad;
@@ -144,6 +155,6 @@ body{
     color: #eaeaea;
 }
 
-#showList{
+#showList,#showList2{
     color: #190025;
 }
